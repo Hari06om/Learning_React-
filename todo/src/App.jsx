@@ -13,6 +13,15 @@ function App() {
      setTodos((prev) => prev.map((prevTodo) => (prevTodo.id===id ? todo : prev )))
   }
 
+  const deleteTodo = (id) =>{
+    setTodos((prev) => prev.filter((todo ) => todo.id !== id))
+  }
+
+  const toggleComplete = (id) =>{
+      setTodos((prev) => prev.map((prevTodo)=> prevTodo === id ? {...prevTodo, completed : !prevTodo.completed } : prev ))
+  }
+
+
   return (
     <TodoProvider value={{todos,appTodo,deleteTodo,updateTodo,deleteTodo,toggleComplete}} > 
     <div className=" bg-gradient-to-r from-[#016B61] via-blue-700 to-blue-300 min-h-screen py-8">
