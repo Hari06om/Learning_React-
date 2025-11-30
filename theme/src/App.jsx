@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import ThemeBtn from './Components/ThemeBtn'
 import Card from './Components/card'
 
+
 function App() {
   const [themeMode,setThemeMode] = useState("light")
 
@@ -20,7 +21,7 @@ function App() {
   //actual change in theme 
  
    useEffect(() =>{
-      document.querySelector('html').classList.remove("light " ,"dark")
+      document.querySelector('html').classList.remove('light','dark')
       document.querySelector('html').classList.add(themeMode)
    }, [themeMode] )
 
