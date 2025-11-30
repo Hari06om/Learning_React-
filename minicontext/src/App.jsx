@@ -1,18 +1,18 @@
-import React from 'react'
-import UserContextPovider from './context/USerContextPovider'
 
-import Login from './Components/Login.jsx'
-import Profile from './Components/Profile.jsx'
-
+import './App.css'
+import Login from './Components/Login'
+import Profile from './Components/Profile'
+import UserContextProvider from './context/UserContextPovider'
 
 function App() {
-  return (
-    <UserContextPovider>
-      <h1>React with chai ad share and please comment </h1>      
-      <Login />
-      <Profile/>
+  
 
-    </UserContextPovider>
+  return (
+    <UserContextProvider>
+      <h1>React with Chai and share is important</h1>
+      <Login />
+      <Profile />
+    </UserContextProvider>
   )
 }
 
